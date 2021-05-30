@@ -1,24 +1,24 @@
-import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Home from './components/Home/Home/Home'
-import ProductDetail from './components/Home/ProductDetail/ProductDetail';
+import Home from "./components/Home/Home/Home";
+import ProductDetail from "./components/Home/ProductDetail/ProductDetail";
+import Cart from "./components/CartPage/Cart/Cart";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path='/'>
+        <Route exact path="/">
           <Home />
         </Route>
-        <Route path='/home'>
+        <Route path="/home">
           <Home />
         </Route>
-        <Route path='/products/:id'>
+        <Route path="/cart">
+          <Cart />
+        </Route>
+        <Route path="/products/:id">
           <ProductDetail />
         </Route>
       </Switch>

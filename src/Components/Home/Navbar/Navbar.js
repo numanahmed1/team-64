@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -10,9 +11,9 @@ const Navbar = () => {
     <div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand px-3" href="/">
+          <Link class="navbar-brand px-3" to="/">
             FakeStore
-          </a>
+          </Link>
           <button
             class="navbar-toggler"
             type="button"
@@ -56,9 +57,9 @@ const Navbar = () => {
                   ) : (
                     <div className="cart-length">0</div>
                   )}
-                  <a class="nav-link" href="#">
+                  <Link class="nav-link" to="/cart">
                     Cart
-                  </a>
+                  </Link>
                 </div>
               </li>
             </ul>

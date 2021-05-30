@@ -17,6 +17,12 @@ export const addToCart = (payload) => {
     payload,
   };
 };
+export const removeFromCart = (payload) => {
+  return {
+    type: "REMOVE_FROM_CART",
+    payload,
+  };
+};
 
 export const viewSingleProduct = (payload) => {
   return {

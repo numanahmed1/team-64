@@ -21,6 +21,15 @@ const productReducer = (state = initialState, action) => {
       };
       return newState;
     }
+    case "REMOVE_FROM_CART": {
+      const newState = {
+        ...state,
+        cart: state.cart.filter(
+          (singleCart) => singleCart.id !== action.payload.id
+        ),
+      };
+      return newState;
+    }
     case "VIEW_SINGLE_PRODUCT": {
       const singleProduct = {
         ...state,
