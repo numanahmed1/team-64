@@ -1,0 +1,39 @@
+.order-card {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+  padding: 10px 5px;
+  box-shadow: 5px 5px 10px lightgrey;
+  background-color: white;
+}
+.order-img-box img {
+  width: 194px;
+  height: 194px;
+  object-fit: contain;
+}
+.order-img-box {
+  flex: 0.3;
+}
+.order-details {
+  flex: 0.7;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.order-details h3 {
+  font-size: 16px;
+}
+.order-desc {
+  font-size: 12px;
+}
+
+@media (max-width: 991px) {
+  .order-card {
+    flex-direction: column;
+  }
+  .order-img-box {
+    flex: 1;
+  }
+  .order-details {
+    flex: 1;
+  }
+}

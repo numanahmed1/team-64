@@ -7,7 +7,6 @@ export const viewAllProduct = (payload) => {
           type: "VIEW_ALL_PRODUCT",
           payload: data,
         });
-        console.log(data);
       });
   };
 };
@@ -20,6 +19,13 @@ export const addToCart = (payload) => {
 export const removeFromCart = (payload) => {
   return {
     type: "REMOVE_FROM_CART",
+    payload,
+  };
+};
+
+export const addToOrders = (payload) => {
+  return {
+    type: "ADD_TO_ORDERS",
     payload,
   };
 };

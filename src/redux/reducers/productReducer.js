@@ -2,6 +2,7 @@ const initialState = {
   loading: false,
   AllProducts: [],
   cart: [],
+  orders: [],
   error: "",
 };
 
@@ -27,6 +28,13 @@ const productReducer = (state = initialState, action) => {
         cart: state.cart.filter(
           (singleCart) => singleCart.id !== action.payload.id
         ),
+      };
+      return newState;
+    }
+    case "ADD_TO_ORDERS": {
+      const newState = {
+        ...state,
+        orders: [...state.orders, action.payload],
       };
       return newState;
     }
