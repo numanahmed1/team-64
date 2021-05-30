@@ -1,8 +1,15 @@
 
 export const viewAllProduct = (payload) => {
-    return {
-        type: 'VIEW_ALL_PRODUCT',
-        payload: payload,
+    return (dispatch, getState) => {
+        fetch(`https://guarded-plateau-23296.herokuapp.com/products`)
+            .then(res => res.json())
+            .then(data => {
+                dispatch({
+                    type: 'VIEW_ALL_PRODUCT',
+                    payload: data.products,
+                })
+                console.log(data.products)
+            })
     }
 }
 

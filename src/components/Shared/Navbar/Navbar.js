@@ -18,8 +18,8 @@ const Navbar = () => {
                         <Link to="/" class="nav-item me-5">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </Link>
-                        <Link to="/about" class="nav-item me-5">
-                            <a class="nav-link" href="#">About</a>
+                        <Link to="/addProduct" class="nav-item me-5">
+                            <a class="nav-link" href="#">Add Product</a>
                         </Link>
                         <Link to="/about" class="nav-item me-5">
                             <a class="nav-link" href="#">Contact us</a>

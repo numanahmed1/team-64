@@ -5,6 +5,7 @@ import {
   Link
 } from "react-router-dom";
 import './App.css';
+import AddProduct from "./components/Admin/AddProduct/AddProduct";
 import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
 import Home from './components/Home/Home';
@@ -20,6 +21,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home></Home>
+          </Route>
+          <Route path="/addProduct">
+            <AddProduct></AddProduct>
           </Route>
           <Route path="/login">
             <Login></Login>
