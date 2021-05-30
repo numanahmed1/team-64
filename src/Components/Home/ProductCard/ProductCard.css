@@ -1,0 +1,13 @@
+.image-card{
+  /* height: 300px;
+  width: 300px; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 40%;
+}
+.description{
+  height: 90px;
+  overflow: hidden;
+}
