@@ -1,7 +1,6 @@
-
 export const viewAllProduct = (payload) => {
     return (dispatch, getState) => {
-        fetch(`https://guarded-plateau-23296.herokuapp.com/products`)
+        fetch(`https://fakestoreapi.com/products`)
             .then(res => res.json())
             .then(data => {
                 dispatch({

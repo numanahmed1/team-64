@@ -2,12 +2,11 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
-import Home from './Components/Home/Home/Home'
-import ProductDetail from './Components/Home/ProductDetail/ProductDetail';
+import Home from './components/Home/Home/Home'
+import ProductDetail from './components/Home/ProductDetail/ProductDetail';
 
 function App() {
   return (
