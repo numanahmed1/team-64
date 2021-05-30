@@ -8,7 +8,7 @@ const middleware = applyMiddleware(thunk);
 
 const rootReducer = combineReducers({
     auth: authReducer,
-    product: productReducer,
+    products: productReducer,
 })
 
 export const store = createStore(rootReducer,

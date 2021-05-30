@@ -1,0 +1,18 @@
+.cart-box {
+  position: relative;
+}
+.cart-length {
+  position: absolute;
+  color: white;
+  right: 0;
+  top: 0;
+  background-color: #f59200;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+}
