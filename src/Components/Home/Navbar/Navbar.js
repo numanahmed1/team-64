@@ -7,6 +7,9 @@ const Navbar = () => {
   const totalInCart = useSelector((state) => {
     return state.products.cart;
   });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -28,7 +31,7 @@ const Navbar = () => {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li>
-                <form class="d-flex">
+                <form onSubmit={handleSubmit} class="d-flex">
                   <input
                     class="form-control "
                     type="search"
@@ -46,9 +49,9 @@ const Navbar = () => {
                 </a>
               </li>
               <li class="nav-item px-3">
-                <a class="nav-link" href="#">
+                <Link class="nav-link" to="/orders">
                   Your orders
-                </a>
+                </Link>
               </li>
               <li class="nav-item px-3">
                 <div className="cart-box">

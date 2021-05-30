@@ -1,5 +1,6 @@
 .cart-box {
   position: relative;
+  cursor: pointer;
 }
 .cart-length {
   position: absolute;

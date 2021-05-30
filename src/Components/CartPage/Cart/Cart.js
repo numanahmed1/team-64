@@ -1,14 +1,28 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Navbar from "../../Home/Navbar/Navbar";
 import Footer from "../../Home/Footer/Footer";
 import CartCard from "../CartCard/CartCard";
 import "./Cart.css";
+import {
+  addToOrders,
+  removeFromCart,
+} from "../../../redux/actions/productActions";
+import { Link } from "react-router-dom";
 
 export default function Cart() {
   const totalInCart = useSelector((state) => {
     return state.products.cart;
   });
+
+  const dispatch = useDispatch();
+
+  const handleOrders = () => {
+    totalInCart.map(
+      (item) => (dispatch(addToOrders(item)), dispatch(removeFromCart(item)))
+    );
+    alert("Your order placed successfully.");
+  };
   return (
     <>
       <Navbar />
@@ -22,7 +36,7 @@ export default function Cart() {
                 ))}
               </div>
             ) : (
-              <p>0 product in cart.</p>
+              <p>You have nothing in cart.</p>
             )}
           </div>
           <div className="col-md-3 col-sm-12">
@@ -32,7 +46,11 @@ export default function Cart() {
                   <p>Subtotal: {totalInCart.length} items</p>
                 </div>
                 <div className="d-flex align-center justify-content-center mt-3">
-                  <button className="custom-btn">Buy now</button>
+                  <Link to="/orders">
+                    <button onClick={handleOrders} className="custom-btn">
+                      Buy now
+                    </button>
+                  </Link>
                 </div>
               </div>
             )}

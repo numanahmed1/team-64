@@ -12,7 +12,7 @@ const ProductCard = ({ data }) => {
   };
   return (
     <div className="col-md-3 my-4">
-      <div className="card text-center h-100 shadow-sm border-0">
+      <div className="card product-card text-center h-100 shadow-sm border-0">
         <img src={data.image} className="image-card" />
         <div className="card-body ">
           <h5 className="card-title">{data.title}</h5>
