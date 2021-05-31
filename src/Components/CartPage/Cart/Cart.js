@@ -40,7 +40,7 @@ export default function Cart() {
             )}
           </div>
           <div className="col-md-3 col-sm-12">
-            {totalInCart.length > 0 && (
+            {totalInCart.length > 0 ? (
               <div>
                 <div className="subtotal">
                   <p>Subtotal: {totalInCart.length} items</p>
@@ -51,6 +51,12 @@ export default function Cart() {
                       Buy now
                     </button>
                   </Link>
+                </div>
+              </div>
+            ) : (
+              <div className="d-flex justify-content-center align-items-center mt-5">
+                <div class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
                 </div>
               </div>
             )}

@@ -15,9 +15,17 @@ const ProductData = () => {
   return (
     <div className="container-fluid">
       <div className="row my-5">
-        {productData.map((data) => (
-          <ProductCard key={data.id} data={data}></ProductCard>
-        ))}
+        {productData.length > 0 ? (
+          productData.map((data) => (
+            <ProductCard key={data.id} data={data}></ProductCard>
+          ))
+        ) : (
+          <div className="d-flex justify-content-center align-items-center">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
