@@ -17,3 +17,11 @@
   font-weight: 700;
   font-size: 15px;
 }
+@media (max-width: 991px) {
+  .cart-box {
+    display: inline-block;
+  }
+  .cart-length {
+    right: -12px;
+  }
+}
