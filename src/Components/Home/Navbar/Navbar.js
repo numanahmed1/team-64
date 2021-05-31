@@ -15,7 +15,7 @@ const Navbar = () => {
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <Link class="navbar-brand px-3" to="/">
-            FakeStore
+            onlineStore
           </Link>
           <button
             class="navbar-toggler"

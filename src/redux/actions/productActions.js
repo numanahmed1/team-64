@@ -31,8 +31,14 @@ export const addToOrders = (payload) => {
 };
 
 export const viewSingleProduct = (payload) => {
-  return {
-    type: "VIEW_SINGLE_PRODUCT",
-    payload,
+  return (dispatch, getState) => {
+    fetch(`https://fakestoreapi.com/products/${payload}`)
+      .then((res) => res.json())
+      .then((data) => {
+        dispatch({
+          type: "VIEW_SINGLE_PRODUCT",
+          payload: data,
+        });
+      });
   };
 };
