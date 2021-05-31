@@ -16,12 +16,17 @@ const ProductDetail = () => {
   const detail = useSelector((state) => {
     return state.products.product;
   });
-  console.log(detail);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(viewSingleProduct(id));
   }, [id]);
+
+  const handleBuyNow = () => {
+    dispatch(addToOrders(detail));
+    alert("Your order successfully placed.");
+  };
 
   return (
     <div>
@@ -46,10 +51,7 @@ const ProductDetail = () => {
               </p>
               <h5 className="text-secondary">{detail.description}</h5>
               <Link to="/orders">
-                <button
-                  onClick={() => dispatch(addToOrders(detail))}
-                  className="btn btn-dark mt-3"
-                >
+                <button onClick={handleBuyNow} className="btn btn-dark mt-3">
                   Buy Now!
                 </button>
               </Link>
