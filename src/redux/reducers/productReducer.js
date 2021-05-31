@@ -3,6 +3,7 @@ const initialState = {
   AllProducts: [],
   cart: [],
   orders: [],
+  product: {},
   error: "",
 };
 
@@ -41,9 +42,7 @@ const productReducer = (state = initialState, action) => {
     case "VIEW_SINGLE_PRODUCT": {
       const singleProduct = {
         ...state,
-        product: state.AllProducts.filter(
-          (product) => product.id === action.payload
-        ),
+        product: action.payload,
       };
       return singleProduct;
     }
