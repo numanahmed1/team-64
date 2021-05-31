@@ -4,6 +4,7 @@ import Home from "./components/Home/Home/Home";
 import ProductDetail from "./components/Home/ProductDetail/ProductDetail";
 import Cart from "./components/CartPage/Cart/Cart";
 import Orders from "./components/Orders/Orders/Orders";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         </Route>
         <Route path="/products/:id">
           <ProductDetail />
+        </Route>
+        <Route path="*">
+          <NotFound />
         </Route>
       </Switch>
     </Router>
